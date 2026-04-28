@@ -1,1 +1,16 @@
-# Monitoring module input variables
+variable "project_name" {
+  type = string
+}
+
+variable "cluster_name" {
+  type = string
+}
+
+variable "alert_email" {
+  type = string
+}
+
+variable "tags" {
+  type    = map(string)
+  default = {}
+}# Monitoring module input variables
