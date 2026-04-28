@@ -1,0 +1,13 @@
+# Copy to `backend.hcl` (gitignored), set bucket/key/region to match your account.
+# `region` must be the bucket's home region (wrong region → S3 301 / init failure).
+#
+#   cp backend-s3.hcl.example backend.hcl
+# Edit values, then from this directory:
+#   Replace backend.tf "local" block with: terraform { backend "s3" {} }
+#   terraform init -backend-config=backend.hcl -reconfigure
+
+bucket       = "your-terraform-state-bucket"
+key          = "dev/terraform.tfstate"
+region       = "eu-west-2"
+encrypt      = true
+use_lockfile = true
