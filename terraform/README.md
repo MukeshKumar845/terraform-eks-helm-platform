@@ -100,10 +100,3 @@ By default each environment uses a **local** backend (`backend.tf`), so state is
 | `outputs.tf` | Exported values for operators or downstream tooling |
 | `backend.tf` | State backend configuration |
 
-## Important notes
-
-- **Never commit** real `terraform.tfstate`, `.terraform/`, or sensitive `*.tfvars` if they contain secrets. The project `.gitignore` already excludes common Terraform and secret patterns.
-- **Prod vs dev**: use separate state (separate directories or separate S3 keys) so production is not overwritten by development applies.
-- After changing **backend** configuration, run `terraform init -reconfigure` (and use `-migrate-state` when moving from local to S3).
-
-For the wider repository (Helm, app, CI), see the root `README.md` in the project.

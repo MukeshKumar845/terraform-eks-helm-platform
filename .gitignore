@@ -24,6 +24,7 @@ terraform/environments/**/backend.hcl
 
 # Helm / K8s
 *.tgz
+.tools/helm/
 
 # Python
 __pycache__/

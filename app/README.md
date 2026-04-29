@@ -1,7 +1,6 @@
-# App This application serves as the sample workload for the Terraform EKS Helm Platform,
-used for Docker containerization, Kubernetes deployment, Helm chart packaging,
-and future CI/CD automation.
-Sample HTTP service for local development and container builds (EKS / Helm).
+# App
+
+Sample workload for the Terraform EKS Helm platform: Docker images, Kubernetes / Helm, and CI/CD. It is a small HTTP service for local development and container builds (EKS / Helm).
 
 ## Why `pip install -r requirements.txt` fails
 
