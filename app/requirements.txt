@@ -1,1 +1,3 @@
-# Python dependencies
+# Python dependencies (used by app.py and the Docker image)
+Flask>=3.0,<4
+gunicorn>=22,<23

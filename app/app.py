@@ -1,12 +1,19 @@
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return jsonify({
+        "message": "Terraform EKS Helm Platform App Running",
+        "status": "success"
+    })
 
-@app.get("/")
+@app.route("/health")
 def health():
-    return {"status": "ok", "service": "terraform-eks-helm-platform"}
-
+    return jsonify({
+        "status": "healthy"
+    })
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=5000)
